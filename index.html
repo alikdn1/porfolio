@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +10,109 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+    /* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    padding-top: 60px;
+}
 
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Set the width of the image */
+    max-width: 700px; /* Max width of the image */
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 20px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+</style>
 </head>
 <body>
-    <header>
+<header>
         <div class="title">
         <h1>Ali Kdn</h1></div>
-        <div class="navbar"><a href="#services">services</a>
+        <div class="navbar">
+        <a href="#services">services</a>
         <a href="#projects">projects</a>
-        <a href="#contact">contact</a></div>
+        <a href="#send">contact</a></div>
 
     </header> 
     
     <section class="info">
         <div class="title2">
-            <h2> hello Iam  ALi kdn </h2>
+            <h2> hello I'am mr. ALi </h2>
         </div>
         <div class="wasef">
-            a web developer
+            deveolper mosta2bale
         </div>
         <p>I build live changing websites</p>
-       <a href="#projects"><button id="button">view my work</button></a> 
+       <a href="#projects"><button id="button" style="margin-left: 45%;">view my work</button></a> 
         <br>
         <div class="icons">
-           <a href="https://www.facebook.com/alikdn2/"><i class="fa-brands fa-facebook" style="color: blue;"></i></a> 
-           <a href="https://www.instagram.com/alikheiredine_/"> <i class="fa-brands fa-instagram "style="color: red;"></i></a>
-           <a href="https://api.whatsapp.com/send?phone=96181015427&text=Hello%20there!" target="_blank">
-   
-
- <i class="fa-solid fa-phone" style="color: white;"></i></a>
+         <a href="https://www.facebook.com/alikdn2">   <i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+          <a href="https://www.instagram.com/alikheiredine_/"> <i class="fa-brands fa-instagram "style="color: red;"></i></a>
+          <a href=""> <i class="fa-solid fa-phone" style="color: white;"></i></a>
         </div>
 </div>
     </section>
+
    <section class="services" id="services">
 <h1 class="title3" style="text-align: center;">Services :</h1>
 <div class="contents">
@@ -88,116 +160,246 @@ Full-stack development .
     </p>
 </div>
     </section>
-    <section class="projects" id="projects">
-        <h1 class="title3" style="text-align: center;">Projects :</h1>
-        <div class="contents">
-        <div class="card">
-            <div class="imagess">
-                <a href="../menu/index.html" class="project-img">   <img src="pictures/download.jpeg" alt="menu" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
-                </a>  </div>
-            <div class="titleeee">
-                Menu
-            </div>
-            <div class="waseff">
-                professional menu for a rasturent
-            </div>
-        
-            <a href="../menu/index.html">view more</a>
-
-        </div>
-       
-        <div class="card">
-            <div class="imagess">
-                <a href="../gamestore/mr aliii(1)/index.html">    <img src="pictures/download (1).png" alt="menu" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
-                </a> </div>
-            <div class="titleeee">
-                Gamestore
-            </div>
-            <div class="waseff">
-                a gamestore like steam
-            </div>
-        
-         <a href="../gamestore/mr aliii(1)/index.html">view more</a>
-        </div>
-
-        <div class="card">
-            <div class="imagess">
-                <a href="../2eshya mofede/log in/index.html" class="project-img">    <img src="pictures/download (2).png" alt="menu" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
-                </a> </div>
-            <div class="titleeee">
-                Log in
-            </div>
-            <div class="waseff">
-                a professional log in page
-            </div>
-       
-         <a href="../2eshya mofede/log in/index.html">view more</a>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="card">
-            
-            <div class="imagess">
-                <a href="../cruds/index.html" class="project-img">    <img src="pictures/shittt.png" alt="menu" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
-                </a> </div>
-            <div class="titleeee">
-                nice website 
-            </div>
-            <div class="waseff">
-                create read update delete search for data
-            </div>
-        
-         <a href="../cruds/index.html">view more</a>
-        </div>
-
-
- </div>
-        
-            </section>
-  
-
-<section class="contact" id="contact" style="background-color: black;">
-    <h1 class="title3" style="text-align: center;">Lets work together </h1>
-    <div class="contents" >
-    
-    <div class="cardddd">
-        <div class="contact-icon">
-            <i class="fa-solid fa-mobile"></i>
-        </div>
-        <div class="contact-title">
-            
-        </div>
-    
-        <p class="phone">
-    +961 81015427
-        </p>
+    <section class="projects" id='projects'>
+    <h1 class="title3" style="text-align: center;">projects :</h1>
+    <div class="contents">
+    <div class="card">
+    <div class="imagess">
+        <a href="" class="project-img" onclick="openModal('menu',event)">
+            <img src="pictures/download.jpeg" alt="menu" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        </a>
     </div>
+    <div class="titleeee">Menu</div>
+    <div class="waseff"> menu for a restaurant</div>
+    <a href="" onclick="openModal('menu',event)">view more</a>
+</div>
 
+<div class="card">
+    <div class="imagess">
+        <a href="" class="project-img" onclick="openModal('gamestore',event)">
+            <img src="pictures/download (1).png" alt="gamestore" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        </a>
+    </div>
+    <div class="titleeee">Gamestore</div>
+    <div class="waseff">a gamestore like steam</div>
+    <a href="" onclick="openModal('gamestore',event)">view more</a>
+</div>
+
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Left and Right arrows -->
+    <a class="prev" onclick="navigateSlides(-1)">&#10094;</a>
+    <a class="next" onclick="navigateSlides(1)">&#10095;</a>
+    
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+      
+
+<div class="card">
+    <div class="imagess">
+        <a href="#" class="project-img" onclick="openModal('store',event)">
+            <img src="pictures/storelogo.jpeg" alt="store" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        </a>
+    </div>
+    <div class="titleeee">E-commerance project</div>
+    <div class="waseff"> clothes_store</div>
+    <a href="#" onclick="openModal('store',event)">view more</a>
+</div>
+<div class="card">
+    <div class="imagess">
+        <a href="" class="project-img" onclick="openModal('data-entry',event)">
+            <img src="pictures/shittt.png" alt="data-entry" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        </a>
+    </div>
+    <div class="titleeee">data-entry</div>
+    <div class="waseff">add,update,search,remove data</div>
+    <a href="" onclick="openModal('data-entry',event)">view more</a>
+</div>
+       
+</form>
+ </div> 
+</div>   </section>
+ <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+ <section class="contact" id="contact" style="background-color: black;">
+        <h1 class="title3" style="text-align: center;">Lets work together </h1>
+        <div class="contents" >
+        
+        <div class="cardddd">
+            <div class="contact-icon">
+                <i class="fa-solid fa-mobile"></i>
+            </div>
+            <div class="contact-title">
+                mobile number :
+            </div>
+        
+            <p class="phone">
+        +961 81015427
+            </p>
+        </div>
+    
 
 <div class="cardddd">
-<div class="contact-icon">
-    <i class="fa-solid fa-envelope"></i>
-</div>
-<div class="contact-title">
-    Email :
+    <div class="contact-icon">
+        <i class="fa-solid fa-envelope"></i>
+    </div>
+    <div class="contact-title">
+        Email :
+    </div>
+
+    <p class="Email">
+kdnali18@gmail.com
+    </p>
 </div>
 
-<p class="Email">
-wajihkheireddine@gmail.com
-</p>
-</div>
+    </section>
+    <footer>
+    <p>
+        copyrights@ <font style="color: red;">Alikdn</font>
+    </p>
+    <div class="icons">
+      <a href="https://www.facebook.com/alikdn2" style="text-decoration: none;"> <i class="fa-brands fa-facebook" style="color: blue;"></i> </a>
+      <a href="https://www.instagram.com/alikheiredine_/" style="text-decoration: none;">  <i class="fa-brands fa-instagram "style="color: red;"></i> </a>
+        <i class="fa-solid fa-phone" style="color: white;"></i> 
+    </div>
+  </footer>
+<script>
+function openModal(project, event) {
+    event.preventDefault(); // Prevents default link behavior
 
-</section>
-<footer>
-<p>
-    copyrights@ <font style="color: red;">Alikdn</font>
-</p>
-<div class="icons">
-    <i class="fa-brands fa-facebook" style="color: blue;"></i>
-    <i class="fa-brands fa-instagram "style="color: red;"></i>
-    <i class="fa-solid fa-phone" style="color: white;"></i>
-</div>
-</footer>
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+
+    // Set the image source and caption based on the project clicked
+    switch (project) {
+        case 'menu':
+            modalImg.src = 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg';
+            captionText.innerHTML = 'Menu - professional menu for a restaurant';
+            break;
+        case 'gamestore':
+            modalImg.src = 'pictures/steam.jpeg';
+            captionText.innerHTML = 'Gamestore - a gamestore like Steam';
+            break;
+        case 'store':
+            modalImg.src = 'pictures/store.jpeg';
+            captionText.innerHTML = 'E-commerce - clothes store';
+            break;
+        case 'data-entry':
+            modalImg.src = 'pictures/data.jpeg';
+            captionText.innerHTML = 'Data-Entry - create, read, update, delete, search for data';
+            break;
+        default:
+            modalImg.src = '';
+            captionText.innerHTML = '';
+    }
+
+    modal.style.display = "block"; // Display the modal
+}
+
+// Close the modal
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+// Close the modal when clicking anywhere outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Close modal on '×' button click
+document.querySelector('.close').onclick = function() {
+    closeModal();
+};
+
+let currentIndex = 0;
+const projects = [
+    {
+        name: 'menu',
+        src: 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg',
+        caption: 'Menu - professional menu for a restaurant'
+    },
+    {
+        name: 'gamestore',
+        src: 'pictures/steam.jpeg',
+        caption: 'Gamestore - a gamestore like Steam'
+    },
+    {
+        name: 'store',
+        src: 'pictures/store.jpeg',
+        caption: 'E-commerce - clothes store'
+    },
+    {
+        name: 'data-entry',
+        src: 'pictures/data.jpeg',
+        caption: 'Data-Entry - create, read, update, delete, search for data'
+    }
+];
+
+function openModal(project, event) {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Find the index of the clicked project
+    currentIndex = projects.findIndex(p => p.name === project);
+    
+    if (currentIndex !== -1) {
+        displayImage(currentIndex);
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block"; // Show the modal
+    }
+}
+
+function displayImage(index) {
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+
+    modalImg.src = projects[index].src;
+    captionText.innerHTML = projects[index].caption;
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none"; // Hide the modal
+}
+
+function navigateSlides(direction) {
+    currentIndex += direction;
+
+    // If currentIndex goes out of bounds, wrap around
+    if (currentIndex < 0) {
+        currentIndex = projects.length - 1;
+    } else if (currentIndex >= projects.length) {
+        currentIndex = 0;
+    }
+
+    displayImage(currentIndex);
+}
+
+// Close the modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Close modal on '×' button click
+document.querySelector('.close').onclick = function() {
+    closeModal();
+};
+
+</script>
+
 </body>
+
 </html>
