@@ -404,6 +404,7 @@ footer {
         width: 100px; /* Smaller button width */
         height: 30px; /* Smaller button height */
         font-size: 0.7em; /* Smaller font size */
+        margin-left:20%
     }
 
     .send {
