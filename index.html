@@ -163,6 +163,16 @@ Full-stack development .
     <section class="projects" id='projects'>
     <h1 class="title3" style="text-align: center;">projects :</h1>
     <div class="contents">
+        <div class="card">
+    <div class="imagess">
+        <a href="#" class="project-img" onclick="openModal('store',event)">
+            <img src="pictures/storelogo.jpeg" alt="store" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        </a>
+    </div>
+    <div class="titleeee"> Auction E-commerance project</div>
+    <div class="waseff"> "The store offers rare items and sells them through auctions"</div>
+    <a href="#" onclick="openModal('auction',event)">view more</a>
+</div>
     <div class="card">
     <div class="imagess">
         <a href="" class="project-img" onclick="openModal('menu',event)">
@@ -208,16 +218,7 @@ Full-stack development .
     <div class="waseff"> clothes_store</div>
     <a href="#" onclick="openModal('store',event)">view more</a>
 </div>
-<div class="card">
-    <div class="imagess">
-        <a href="" class="project-img" onclick="openModal('data-entry',event)">
-            <img src="pictures/shittt.png" alt="data-entry" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
-        </a>
-    </div>
-    <div class="titleeee">data-entry</div>
-    <div class="waseff">add,update,search,remove data</div>
-    <a href="" onclick="openModal('data-entry',event)">view more</a>
-</div>
+
        
 </form>
  </div> 
@@ -283,6 +284,10 @@ function openModal(project, event) {
             modalImg.src = 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg';
             captionText.innerHTML = 'Menu - professional menu for a restaurant';
             break;
+              case 'auction':
+            modalImg.src = 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg';
+            captionText.innerHTML = 'Menu - professional menu for a restaurant';
+            break;
         case 'gamestore':
             modalImg.src = 'pictures/steam.jpeg';
             captionText.innerHTML = 'Gamestore - a gamestore like Steam';
@@ -344,6 +349,9 @@ const projects = [
         src: 'pictures/data.jpeg',
         caption: 'Data-Entry - create, read, update, delete, search for data'
     }
+          name: 'auction',
+        src: 'pictures/data.jpeg',
+        caption: 'The store offers rare items and sells them through auctions.'
 ];
 
 function openModal(project, event) {
@@ -403,3 +411,4 @@ document.querySelector('.close').onclick = function() {
 </body>
 
 </html>
+
