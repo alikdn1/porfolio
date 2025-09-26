@@ -163,16 +163,17 @@ Full-stack development .
     <section class="projects" id='projects'>
     <h1 class="title3" style="text-align: center;">projects :</h1>
     <div class="contents">
-        <div class="card">
+     <div class="card">
     <div class="imagess">
-        <a href="#" class="project-img" onclick="openModal('store',event)">
-            <img src="pictures/Screenshot 2025-09-26 124927" alt="store" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
+        <a href="#" class="project-img" onclick="openModal('auction',event)">
+            <img src="pictures/Screenshot 2025-09-26 124927" alt="auction" style="width: 200px; height: 150px; text-align: center; padding-bottom: 30px; margin-left: 30px;">
         </a>
     </div>
     <div class="titleeee"> Auction E-commerance project</div>
     <div class="waseff"> "The store offers rare items and sells them through auctions"</div>
     <a href="#" onclick="openModal('auction',event)">view more</a>
 </div>
+
     <div class="card">
     <div class="imagess">
         <a href="" class="project-img" onclick="openModal('menu',event)">
@@ -271,64 +272,19 @@ kdnali18@gmail.com
     </div>
   </footer>
 <script>
-function openModal(project, event) {
-    event.preventDefault(); // Prevents default link behavior
-
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("caption");
-
-    // Set the image source and caption based on the project clicked
-    switch (project) {
-        case 'menu':
-            modalImg.src = 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg';
-            captionText.innerHTML = 'Menu - professional menu for a restaurant';
-            break;
-              case 'auction':
-            modalImg.src = 'pictures/Screenshot 2025-09-26 12492';
-            captionText.innerHTML = 'The store offers rare items and sells them through auctions.';
-            break;
-        case 'gamestore':
-            modalImg.src = 'pictures/steam.jpeg';
-            captionText.innerHTML = 'Gamestore - a gamestore like Steam';
-            break;
-        case 'store':
-            modalImg.src = 'pictures/store.jpeg';
-            captionText.innerHTML = 'E-commerce - clothes store';
-            break;
-        case 'data-entry':
-            modalImg.src = 'pictures/data.jpeg';
-            captionText.innerHTML = 'Data-Entry - create, read, update, delete, search for data';
-            break;
-        default:
-            modalImg.src = '';
-            captionText.innerHTML = '';
-    }
-
-    modal.style.display = "block"; // Display the modal
-}
-
-// Close the modal
-function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
-
-// Close the modal when clicking anywhere outside of it
-window.onclick = function(event) {
-    const modal = document.getElementById("myModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Close modal on '×' button click
-document.querySelector('.close').onclick = function() {
-    closeModal();
-};
-
 let currentIndex = 0;
+
 const projects = [
+    {
+        name: 'auction',
+        src: 'pictures/auction.jpeg', // ✅ replace with correct auction image
+        caption: 'Auction - rare items sold through auctions'
+    },
+    {
+        name: 'store',
+        src: 'pictures/store.jpeg', // ✅ store has its own image now
+        caption: 'E-commerce - clothes store'
+    },
     {
         name: 'menu',
         src: 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg',
@@ -340,30 +296,19 @@ const projects = [
         caption: 'Gamestore - a gamestore like Steam'
     },
     {
-        name: 'store',
-        src: 'pictures/store.jpeg',
-        caption: 'E-commerce - clothes store'
-    },
-    {
         name: 'data-entry',
         src: 'pictures/data.jpeg',
         caption: 'Data-Entry - create, read, update, delete, search for data'
     }
-          name: 'auction',
-        src: 'pictures/data.jpeg',
-        caption: 'The store offers rare items and sells them through auctions.'
 ];
 
 function openModal(project, event) {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault();
 
-    // Find the index of the clicked project
     currentIndex = projects.findIndex(p => p.name === project);
-    
     if (currentIndex !== -1) {
         displayImage(currentIndex);
-        const modal = document.getElementById("myModal");
-        modal.style.display = "block"; // Show the modal
+        document.getElementById("myModal").style.display = "block";
     }
 }
 
@@ -376,24 +321,15 @@ function displayImage(index) {
 }
 
 function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none"; // Hide the modal
+    document.getElementById("myModal").style.display = "none";
 }
 
 function navigateSlides(direction) {
-    currentIndex += direction;
-
-    // If currentIndex goes out of bounds, wrap around
-    if (currentIndex < 0) {
-        currentIndex = projects.length - 1;
-    } else if (currentIndex >= projects.length) {
-        currentIndex = 0;
-    }
-
+    currentIndex = (currentIndex + direction + projects.length) % projects.length;
     displayImage(currentIndex);
 }
 
-// Close the modal when clicking outside
+// close when clicking outside
 window.onclick = function(event) {
     const modal = document.getElementById("myModal");
     if (event.target === modal) {
@@ -401,16 +337,14 @@ window.onclick = function(event) {
     }
 }
 
-// Close modal on '×' button click
-document.querySelector('.close').onclick = function() {
-    closeModal();
-};
-
+// close when clicking ×
+document.querySelector('.close').onclick = closeModal;
 </script>
 
 </body>
 
 </html>
+
 
 
 
