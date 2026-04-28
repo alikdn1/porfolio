@@ -270,76 +270,222 @@ kdnali18@gmail.com
       <a href="https://wa.me/96181015427" style="text-decoration: none;">   <i class="fa-solid fa-phone" style="color: white;"></i>  </a>
     </div>
   </footer>
-<script>
-let currentIndex = 0;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Kdn — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
 
-const projects = [
-    {
-        name: 'auction',
-        src: 'pictures/auction', // ✅ replace with correct auction image
-        caption: 'Auction - rare items sold through auctions'
-    },
-    {
-        name: 'store',
-        src: 'pictures/store.jpeg', // ✅ store has its own image now
-        caption: 'E-commerce - clothes store'
-    },
-    {
-        name: 'menu',
-        src: 'pictures/c7d47092-dcc6-4fdb-b376-f41fae42f28a.jpeg',
-        caption: 'Menu - professional menu for a restaurant'
-    },
-    {
-        name: 'gamestore',
-        src: 'pictures/steam.jpeg',
-        caption: 'Gamestore - a gamestore like Steam'
-    },
-    {
-        name: 'data-entry',
-        src: 'pictures/data.jpeg',
-        caption: 'Data-Entry - create, read, update, delete, search for data'
-    }
-];
+<!-- NAV -->
+<header>
+  <div class="logo">ali<span>.</span>kdn<span>()</span></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-function openModal(project, event) {
-    event.preventDefault();
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for freelance work</div>
+    <h1>
+      Web Developer
+      <span class="name-highlight">Ali Kdn</span>
+    </h1>
+    <p class="hero-desc">
+      I craft fast, secure, and polished web experiences — from pixel-perfect front-ends to solid back-end systems.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-socials">
+    <a href="https://www.facebook.com/alikdn2" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/alikheiredine_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/96181015427" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+</section>
 
-    currentIndex = projects.findIndex(p => p.name === project);
-    if (currentIndex !== -1) {
-        displayImage(currentIndex);
-        document.getElementById("myModal").style.display = "block";
-    }
-}
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">Services</h2>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+      <div class="service-name">Web Development</div>
+      <p class="service-desc">Custom website design and development. Front-end, back-end, and full-stack solutions tailored to your needs.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">02</div>
+      <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <div class="service-name">Web Applications</div>
+      <p class="service-desc">Interactive, complex web apps built with modern frameworks — React, Angular, Vue.js — that scale with your business.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">03</div>
+      <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="service-name">Web Security</div>
+      <p class="service-desc">Protection against common vulnerabilities, SSL installation, and thorough security audits to keep your site safe.</p>
+    </div>
+  </div>
+</section>
 
-function displayImage(index) {
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("caption");
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
 
-    modalImg.src = projects[index].src;
-    captionText.innerHTML = projects[index].caption;
-}
+  <div class="project-card reveal" onclick="openModal('auction')">
+    <div class="project-img-wrap">
+      <img src="pictures/auction" alt="Auction Project" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="project-img-placeholder" style="display:none"><i class="fa-solid fa-gavel"></i></div>
+      <div class="project-overlay"><span>View Project</span></div>
+    </div>
+    <div class="project-info">
+      <div class="project-tag">Auction</div>
+      <div class="project-name">Auction Platform</div>
+      <p class="project-desc">Rare items sold through live bidding system.</p>
+    </div>
+  </div>
 
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-}
+  <div class="project-card reveal" onclick="openModal('menu')">
+    <div class="project-img-wrap">
+      <img src="pictures/download.jpeg" alt="Menu Project" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="project-img-placeholder" style="display:none"><i class="fa-solid fa-utensils"></i></div>
+      <div class="project-overlay"><span>View Project</span></div>
+    </div>
+    <div class="project-info">
+      <div class="project-tag">Restaurant</div>
+      <div class="project-name">Digital Menu</div>
+      <p class="project-desc">Modern restaurant menu experience.</p>
+    </div>
+  </div>
 
-function navigateSlides(direction) {
-    currentIndex = (currentIndex + direction + projects.length) % projects.length;
-    displayImage(currentIndex);
-}
+  <div class="project-card reveal" onclick="openModal('gamestore')">
+    <div class="project-img-wrap">
+      <img src="pictures/download (1).png" alt="Game Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="project-img-placeholder" style="display:none"><i class="fa-solid fa-gamepad"></i></div>
+      <div class="project-overlay"><span>View Project</span></div>
+    </div>
+    <div class="project-info">
+      <div class="project-tag">Gaming</div>
+      <div class="project-name">Game Store</div>
+      <p class="project-desc">Steam-style digital game marketplace.</p>
+    </div>
+  </div>
 
-// close when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById("myModal");
-    if (event.target === modal) {
-        closeModal();
-    }
-}
+  <div class="project-card reveal" onclick="openModal('store')">
+    <div class="project-img-wrap">
+      <img src="pictures/storelogo.jpeg" alt="Clothes Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="project-img-placeholder" style="display:none"><i class="fa-solid fa-shirt"></i></div>
+      <div class="project-overlay"><span>View Project</span></div>
+    </div>
+    <div class="project-info">
+      <div class="project-tag">E-commerce</div>
+      <div class="project-name">Clothes Store</div>
+      <p class="project-desc">A full e-commerce storefront for a clothing brand with product listings and checkout.</p>
+    </div>
+  </div>
 
-// close when clicking ×
-document.querySelector('.close').onclick = closeModal;
-</script>
+</div>
+    </div>
 
+   
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="myModal" onclick="handleModalClick(event)">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    <button class="modal-nav modal-prev" onclick="navigateSlides(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="modal-nav modal-next" onclick="navigateSlides(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    <img id="modalImg" src="" alt="">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Let's Work Together</h2>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <p>Have a project in mind? I'm open to freelance work and collaborations. Reach out and let's build something great.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div class="contact-item-content">
+            <span class="contact-item-label">WhatsApp / Phone</span>
+            <span class="contact-item-value">+961 81015427</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="contact-item-content">
+            <span class="contact-item-label">Email</span>
+            <span class="contact-item-value">kdnali18@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-instagram"></i>
+          <div class="contact-item-content">
+            <span class="contact-item-label">Instagram</span>
+            <span class="contact-item-value">@alikheiredine_</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right reveal">
+      <h3>Send a Message</h3>
+      <div class="input-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="John Doe">
+      </div>
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@example.com">
+      </div>
+      <div class="input-group">
+        <label>Message</label>
+        <textarea placeholder="Tell me about your project..."></textarea>
+      </div>
+      <a href="mailto:kdnali18@gmail.com" class="btn-primary" style="text-align:center">Send Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Ali Kdn</span> — All rights reserved</p>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/alikdn2" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/alikheiredine_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/96181015427" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
 </body>
 
 </html>
