@@ -623,7 +623,7 @@
     /* ---- RESPONSIVE ---- */
     @media (max-width: 768px) {
       header { padding: 16px 24px; }
-      .hero { padding: 100px 24px 60px; }
+      .hero { padding: 90px 20px 50px; }
       section { padding: 72px 24px; }
       footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
       .hero-socials { display: none; }
